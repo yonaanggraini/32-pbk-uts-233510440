@@ -11,6 +11,10 @@ const addActivity = () => {
     newActivity.value = '';
   }
 };
+
+const cancelActivity = (index) => {
+  activities.value.splice(index, 1);
+};
 </script>
 
 <template>
@@ -26,6 +30,7 @@ const addActivity = () => {
     <div class="input-container">
     <input v-model="newActivity" class="input-field" placeholder="Tambahkan kegiatan baru" />
     <button @click="addActivity" class="add-button">Tambah</button>
+    <button @click="cancelActivity(index)" class="delete-button small">Hapus</button>
   </div>
   </div>
 </template>
