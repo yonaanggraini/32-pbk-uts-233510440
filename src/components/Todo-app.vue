@@ -2,6 +2,15 @@
 import { ref } from 'vue';
 
 const activities = ref([]);
+
+const newActivity = ref('');
+
+const addActivity = () => {
+  if (newActivity.value.trim()) {
+    activities.value.push({ text: newActivity.value, completed: false });
+    newActivity.value = '';
+  }
+};
 </script>
 
 <template>
@@ -14,5 +23,9 @@ const activities = ref([]);
         </li>
       </ul>
     </div>
+    <div class="input-container">
+    <input v-model="newActivity" class="input-field" placeholder="Tambahkan kegiatan baru" />
+    <button @click="addActivity" class="add-button">Tambah</button>
+  </div>
   </div>
 </template>
