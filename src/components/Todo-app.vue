@@ -102,3 +102,133 @@ const availableItems = () =>
   </div>
 </template>
 
+<style scoped>
+.page-wrapper {
+  font-family: 'Cal Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #98cee4, #98cee4);
+  padding: 20px;
+}
+
+.container {
+  background: linear-gradient(to bottom right, #c8f1e9);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 540px;
+  width: 100%;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #bbb;
+  background: #fff;
+  color: #333;
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.input-field.small {
+  flex-grow: 0;
+  width: 50%;
+}
+
+.add-button, .delete-button {
+  background: linear-gradient(to right, #61abef);
+  color: #333;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: normal;
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.add-button:hover, .delete-button:hover {
+  background: linear-gradient(to right, #7bc56a, #1aa34a);
+}
+
+.add-button.small, .delete-button.small {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 8px;
+  font-weight: normal;
+  color: #444;
+}
+
+.summary {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: normal;
+  color: #555;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #c3cfbb, #e4d9f7);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.activity-text {
+  flex-grow: 1;
+  font-weight: normal;
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.activity-text.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.button-group {
+  display: flex;
+  gap: 6px;
+}
+
+.empty-item {
+  justify-content: center;
+  font-style: italic;
+  font-weight: normal;
+  color: #777;
+}
+</style>
