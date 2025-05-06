@@ -18,9 +18,7 @@ const removeItem = (index) => {
   items.value.splice(index, 1);
 };
 
-const toggleAvailability = (index) => {
-  items.value[index].available = !items.value[index].available;
-};
+
 
 const startEditing = (index) => {
   editingIndex.value = index;
@@ -38,11 +36,7 @@ const cancelEdit = () => {
   editingIndex.value = null;
 };
 
-const filteredItems = () => {
-  return showOnlyAvailable.value
-    ? items.value.filter(item => item.available)
-    : items.value;
-};
+
 
 const totalItems = () => items.value.length;
 const availableItems = () =>
@@ -58,6 +52,7 @@ const availableItems = () =>
         <input v-model="newItem" class="input-field" placeholder="Nama barang baru" />
         <button @click="addItem" class="add-button">Tambah</button>
       </div>
+
 
 
       <div class="summary">
